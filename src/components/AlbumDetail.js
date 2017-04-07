@@ -1,14 +1,20 @@
 import React, {Component} from 'react';
+import { View, Text } from 'react-native';
+import Card from './Card'
 
-class AlbumDetail extends Component{
-  constructor(props) {
-    super(props);
-  }
+const AlbumDetail = (props) => {
 
-  render() {
-    return(
-
+  renderAlbum = () => {
+    let album = props.album
+    return (
+      <Text>{album.title}</Text>
     )
   }
+    return(
+      <Card>
+        {this.renderAlbum()}
+      </Card>
+    )
+
 }
 export default AlbumDetail;
